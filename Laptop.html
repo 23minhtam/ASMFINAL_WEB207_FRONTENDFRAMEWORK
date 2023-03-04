@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop  | Fptshop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+</head>
+
+<body ng-app="myapp">
+    <div class="container-fluid pe-0 ps-0">
+        <div class="container">
+            <div class="th1">
+                <div class="row">
+                    <div class="col-xl-2 ">
+                        <a class="navbar-brand" href="#"><img src="images/logofpy.jpeg" width="150px" height="60px"
+                                style="    background-position: -2px -7px;" class="img-fluid" alt=""></a>
+                    </div>
+                    <!-- </div> -->
+                    <div class="col-xl-5 " >
+                        <form class="d-flex">
+                            <input style="width: 90%;" class="form-control ml-2" type="text"
+                                placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" style="width: 500px;">
+                            <button class="btn btn-dark" type="button"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+
+                    </div>
+
+                    <div class="col-xl-5">
+                        <div class="row " >
+                            <div class="text-center" style="color: white; margin: auto;">
+                                <span href="#" class="fas fa-file"></span>
+                                <li style="list-style: none; font-size: 14px;">Thông tin hay</li>
+        
+                            </div>
+                            <div class=" text-center" style="color: white;  margin: auto;">
+                                <span href="#" class="fas fa-file-circle-check"></span>
+                                <li style="list-style: none; font-size: 14px;">Thanh toán & tiện ích</li>
+                            </div>
+                            <div class=" text-center" style="color: white;  margin: auto;">
+                                <span href="#" class="fas fa-user"></span>
+                                <li style="list-style: none; font-size: 14px;">Tài khoản của tôi</li>
+                            </div>
+                            <div class="text-center" style="color: white; margin: auto;">
+                                <span href="#" class="fas fa-cart-shopping"></span>
+                                <li style="list-style: none; font-size: 14px; color: azures;" >
+                                    <a href="#!cart" style="color: white;">
+                                        Giỏ hàng
+                                        <span>{{cart.length}}</span>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="f-nav">
+            <div class="row " style="background-color: black; font-size: 12px;">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
+                        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Home.html">
+                                        <i class="fas fa-home"> </i> Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Phone.html">
+                                        <i class="fas fa-mobile"> </i> ĐIỆN THOẠI <span>    
+                                    </span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Laptop.html">
+                                        <i class="fas fa-laptop "> </i> LAPTOP </a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Tablet.html">
+                                        <i class="fas fa-tablet"> </i> MÁY TÍNH BẢNG </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-apple "> </i> APPLE </a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fas fa-desktop "> </i> PC - LINH KIỆN</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"> PC</a>
+                                        <a class="dropdown-item" href="#"> Linh kiện</a>
+                                        <a class="dropdown-item" href="#"> Màn hình</a>
+                                        <a class="dropdown-item" href="#"> Xây dựng PC kiện</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-headphones "> </i> PHỤ KIỆN </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-repeat "> </i> MÁY CŨ GIÁ RẺ</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-house-laptop "> </i> HÀNG GIA DỤNG </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-tablet "> </i> SIM & THẺ </a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+
+                                        <i class="fas fa-tablet "> </i> KHUYẾN MÃI</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Thông tin trao thưởng</a>
+                                        <a class="dropdown-item" href="#">Tất cả khuyến mãi</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+   
+        </div>
+       <!-- <section class="maine"> -->
+        <div class="container" ng-app="myapp">
+            <div class="row">
+                <div>
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class=" container bg-light d-flex justify-content-center" >
+            <div class=" bg-light" style="padding: auto;">
+                <div id="fontsize-footer" class="row">
+                    <div class="col-md-2">
+                        <!-- <br> -->
+                        <span>Thông tin</span><br>
+
+                        <a href="#">Giới thiệu về công ty</a> <br>
+                        <a href="https://fptshop.com.vn/ho-tro/cau-hoi-thuong-gap">Câu hỏi thường gặp</a> <br>
+                        <a href="#">Chính sách bảo mật</a> <br>
+                        <a href="#">Quy chế hoạt động</a> <br>
+                        <a href="#">Kiểm tra hóa đơn điện tử</a> <br>
+                        <a href="#">Tra cứu thông tin bảo hàng</a> <br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <span>Thông tin</span><br>
+                        <a href="">Tin tuyển dụng</a><br>
+                        <a href="">Tin Khuyến mãi</a><br>
+                        <a href="">Hướng dẫn mua online</a><br>
+                        <a href="">Hướng dẫn mua trả góp</a>
+                        <a href="">Chính sách trả góp</a>
+                        <hr>
+                        <span>Góp ý, khiếu nại dịch vụ</span>
+                        <p> 8h00 - 22h00</p>
+
+                        <div class="row  d-flex justify-content-center">
+                            <div class="col-4 border border-light  rounded-2"><a href=""><i
+                                        class="fa-brands fa-facebook"></i></a></div>
+                            <div class="col-4 border border-light  rounded-2"><a href=""><i
+                                        class="fa-brands fa-instagram"></i></a></div>
+                            <div class="col-4 border border-light  rounded-2"><a href=""><i
+                                        class="fa-brands fa-youtube"></i></a></div>
+                        </div><br>
+                        <img src="images/mocbocongthuong.png" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="col-md-2">
+                        <span>Chính sách</span> <br>
+                        <a href="">Trả góp</a><br>
+                        <a href="">Giao hàng</a><br>
+                        <a href="">Đổi trả</a><br>
+                        <a href="">Bào hành</a><br>
+                        <a href="">Bảo mật thông tin</a>
+                        <hr>
+                        <span>Tư vấn mua hàng </span>
+                        <p><strong><a href="" style="color: red;">1800 6601</a></strong></p>
+
+                        <span>Hỗ trợ kĩ thuật</span>
+                        <p><strong><a href="" style="color: red;">1800 6601</a></strong></p>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <span>Địa chỉ cửa hàng:</span><br>
+                        <div class="row">
+                            <div class="col-1 text-right"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                            <div class="col-11 text-left">92 P. Hai Bà Trưng, Cửa Nam, Hoàn Kiếm, Hà Nội, Việt Nam</div>
+                            <br>
+                        </div>
+                        <div class="row">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7448.413285371002!2d105.835925231834!3d21.02441616369741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zRlBUIFNob3AgZ-G6p24gSMOgIE7hu5lpLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1675244931704!5m2!1svi!2sus"
+                                width="550" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 text-right"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                            <div class="col-11 text-left">804 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt
+                                Nam</div><br>
+                        </div>
+                        <div class="row">
+                            <iframe
+                                src="
+                                    https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2330.226724770883!2d106.67862883203911!3d10.814480294515082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zZnB0c2hvcCBo4buTIGNow60gbcOsbmg!5e0!3m2!1svi!2sus!4v1675244709744!5m2!1svi!2sus"
+                                width="550" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="d-flex justify-content-center" style="font-size: 8px;">© 2007 - 2022 Công Ty Cổ Phần Bán Lẻ Kỹ
+                    Thuật Số FPT / Địa chỉ: 261 - 263 Khánh Hội, P2, Q4, TP. Hồ Chí Minh / GPĐKKD số 0311609355 do Sở
+                    KHĐT TP.HCM cấp ngày 08/03/2012. GP số 47/GP-TTĐT do sở TTTT TP HCM cấp ngày 02/07/2018. Điện thoại:
+                    (028)73023456. Email: fptshop@fpt.com.vn. Chịu trách nhiệm nội dung: Nguyễn Trịnh Nhật Linh.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        var indexCart = 0;
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.controller("myCtrl", function ($scope, $rootScope, $routeParams, $http) {
+            $scope.addCart = function (p) {
+                if (typeof $rootScope.cart == 'undefined') {
+                    $rootScope.cart = [];
+                };
+                $scope.countCart = $rootScope.cart.length;
+                if ($rootScope.cart.filter(i => i.id == p.id).length == 0) {
+                    $rootScope.cart.push(p);
+                    $rootScope.cart[$scope.countCart].quantity = 1;
+                }
+                // console.log($rootScope.cart);
+
+            }
+            $rootScope.sumMoney = 0;
+            //Tính tổng tiền bên giỏ hàng
+            if (typeof $rootScope.cart != 'undefined') { //Có giỏ hàng mới tính tổng
+                for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                }
+            }
+            //Nhấn nút Cộng để thêm sản phẩm
+            $scope.addClick = function (index) {
+                $rootScope.cart[index].quantity = $rootScope.cart[index].quantity + 1;
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                    }
+                }
+            }
+            $scope.ecpClick = function (index) {
+                if ($rootScope.cart[index].quantity > 1)
+                    $rootScope.cart[index].quantity = $rootScope.cart[index].quantity - 1;
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                    }
+                }
+            }
+
+            $scope.delProduct = function (index) {
+                $rootScope.cart.splice(index, 1);
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                        // indexCart--;
+                    }
+                }
+            }
+           
+            $scope.products = [];
+            $http.get('products.json').then(function (reponse) {
+                $scope.products = reponse.data;})
+            $scope.index = $routeParams.url;
+
+        });
+     
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/detail/:url", {
+                    templateUrl: "detailProduct.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/cart", {
+                    templateUrl: "cart.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/Home",{
+                    templateUrl:"Home.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/Phone",{
+                    templateUrl:"Phone.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/Laptop",{
+                    templateUrl:"Laptop.html?"+ Math.random(),
+                    controller: "myCtrl"
+                })
+                .otherwise({
+                    templateUrl: "listProduct.html",
+                    controller: "myCtrl"
+                })
+        });
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="card col-md-3 col-6" ng-repeat="p in products">
+            <div class="card card-primary text-center"></div>
+            <div class="card-header "><strong>{{p.name}}</strong></div>
+
+            <div class="card-body text-center">
+                <a href="#!detail/{{p.id}}"><img src="images/products/{{p.Image}}" class="poly-pord text-center"></a>
+            </div>
+            <div class="card-footer m-0 p-0" id="cartfootergear" >
+                <div class="gia" style="background-color: rgb(254, 255, 255);">
+                    <em>{{p.Price1 | currency: '' : 0}}
+                        <u>đ</u>     
+                    </em>
+                    <del> {{p.Price2 |currency: '' : 0}}<u>đ</u></del>
+                </div>
+                <div class="info" style="background-color: rgb(197, 214, 214);">
+                    <span style="font-size: small;"><img src="images/cpu.png" height="15px" alt="">
+                        {{p.sm1}}</span> <br>
+                    <span style="font-size: small;"> <i class="fas fa-mobile"></i> {{p.sm2}}</span><br>
+                    <span style="font-size: small;"> <img src="images/ram.png" height="15px" alt="">
+                        {{p.sm3}}</span>
+                    <span style="font-size: small;"> <img src="images/main.png" height="15px" alt="">
+                        {{p.sm4}}</span>
+                </div>
+            </div>
+            <!-- <button ng-click="addCart(p[index])">Mua Ngay</button> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
